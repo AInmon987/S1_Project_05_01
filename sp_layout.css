@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Layout styles for Slate and Pencil Tutoring
+   Author: Austin Inmon
+   Date:  10.24.18 
+   
+   Filename: sp_layout.css
+
+*/
+
+/* Window and Body Styles */
+
+/* Added the height for the html to 100 percent. This rule is for the whole page.  */
+html {
+    height: 100%;
+}
+
+/* This style rule is for the body content. the max and min width is for the browsing range. Maded the margins auto to center the page content. The width is for the browsing range.   */
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%;
+    min-height: 100%;
+}
+
+/* The stylerule is for the header, ul, nav, li and its the border box model.  */
+header,
+ul,
+nav,
+li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+/* Row Styles */
+
+/* The class row and the pesudo element stylerule is for to make sure that there is not a container collapse.  */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* Page Header Styles */
+
+/* This style rule is for the img that is a direct child of the header and is diplayed as a block and the img is floated left.  */
+header>img {
+    display: block;
+    width: 70%;
+    float: left;
+}
+
+/* This rule is for the nav that is in the header and it is floated left has padding of 2% to the left/right.  */
+header>nav {
+    float: left;
+    padding: 0% 2% 0% 2%;
+    width: 30%;
+
+}
+
+/* This rule is for the anchor tags that are in the navigation bar that is in the header and they are displayed as block.   */
+header>nav a {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+/* Horizontal Navigation List Styles */
+
+/* This rule has the class horizontal that is in the nav and this rule is for the list items and its displayed as block and floated left.  */
+nav.horizontal li {
+    display: block;
+    float: left;
+    width: 12.5%;
+}
+
+
+
+/* Topics Styles */
+
+/* This rule is for the list items that are in the id topics and in the unordered list and the list items are displayed as block, floated left and the left of the margin is zero percent and the right i 1.5 percent.  */
+ul#topics li {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 0%;
+    margin-right: 1.5%;
+}
+
+/* This rule is for the list items in the id topics and its for the first list item and the marign is 7.75 percent.  */
+#topics li:first-child {
+    margin-left: 7.75%;
+
+}
+
+/* This rule is for the list items in the id topics and its for the last list item and the marign is 7.75 percent. */
+#topics li:last-child {
+    margin-right: 7.75%;
+}
+
+/* The image thats in the list items and in the topics id has a margin of auto.  */
+#topics li>img {
+    width: 50%;
+    margin: auto;
+}
+
+/* HR Styles */
+
+/* The style rule is for the horizontal line and the width is 50 percent.  */
+hr {
+    width: 50%;
+}
+
+
+
+/* Customer Comment Styles */
+
+/* The unordred list that is in the comments id and the margins is 40 pixels for the top/bottom and auto for left/right.  */
+ul#comments {
+    width: 75%;
+    margin: 40px auto 40px auto;
+}
+
+/* The list items in the comments id and is displayed in block, floated left, and has a margin bottom of 30 pixels.  */
+#comments li {
+    display: block;
+    float: left;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+/* The image that is in the list items thats in the comments id is displayed in block, floated left, has a margin left/right of 5 percent. */
+#comments li>img {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* The paragraphs that are in the comments id are floated left.  */
+#comments p {
+    float: left;
+    width: 70%;
+}
+
+/* Footer Styles */
+/* The footer has a rule of clear both for cleaing floating objects.  */
+footer {
+    clear: both;
+}
